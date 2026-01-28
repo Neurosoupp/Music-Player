@@ -89,7 +89,68 @@ This project demonstrates inter-process communication, file handling, and dynami
 ```bash
 gcc music_player_backend.c -o music_player.exe
 
+### Step 2: Install Python Dependencies
 
-## Linux / macOS
-gcc music_player_backend.c -o music_player
-chmod +x music_player
+Make sure **Python 3** is installed on your system.  
+Install Flask using the following command:
+
+```bash
+pip install flask
+
+
+### Step 3: Run the Application
+
+Start the Flask application using the following command:
+
+```bash
+python app.py
+
+### Step 4: Access the Application
+
+Open any web browser and enter the following URL:
+
+http://localhost:5000
+
+
+The music player web interface will load, and you can start using the application.
+
+### Step 5: Upload and Play Songs
+
+- Upload audio files using the upload option in the web interface  
+- Uploaded songs are stored in the `static/music/` folder  
+- Song names are automatically saved in `songs.txt`  
+- Use the player controls to play, pause, search, and delete songs
+
+### Step 6: Stop the Application
+
+- To stop the Flask server, press **Ctrl + C** in the terminal  
+- This will automatically terminate the C backend process  
+- Make sure all processes are closed before restarting the application
+
+### Step 7: Troubleshooting & Notes
+
+- Ensure the C backend is compiled **before** running `app.py`
+- Keep `songs.txt` in the same directory as `app.py`
+- Do not delete the `static/music/` folder
+- If the backend does not start, recompile the C file and restart Flask
+- Use unique song filenames to avoid duplication issues
+
+### Step 8: Restarting the Application
+
+- Stop the application using **Ctrl + C**
+- Make sure no Flask or C backend process is running
+- Re-run the application using:
+
+```bash
+python app.py
+
+
+### Step 9: System Requirements
+
+- Operating System: Windows / Linux / macOS  
+- Python Version: Python 3.x  
+- C Compiler: GCC  
+- Web Browser: Chrome, Firefox, Edge (any modern browser)  
+- Minimum RAM: 2 GB  
+- Disk Space: At least 100 MB free space
+
